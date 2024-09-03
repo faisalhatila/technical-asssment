@@ -453,6 +453,286 @@ body {
   top: 0px;
   right: -20px;
 }
+.page-content .main-content .leave-requests-component {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .main-content .leave-requests-component .component-title-row {
+  display: flex;
+  justify-content: space-between;
+}
+.page-content .main-content .leave-requests-component .component-title-row .component-title {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view, .page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+  cursor: pointer;
+  border: none;
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21px */
+  background: #272727;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .active {
+  color: #FFF !important;
+  font-weight: 700 !important;
+  background: #6E56E0 !important;
+}
+.page-content .main-content .leave-requests-component .component-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component {
+  background: #1E1E1E;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px #272727;
+  padding: 16px 16px 10px 24px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .component-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select {
+  background-color: transparent;
+  border: none;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select:active {
+  outline: none;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row {
+  padding: 10px 16px 10px 24px;
+  overflow: hidden;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list {
+  display: flex;
+  list-style: none;
+  border: solid 1px #272727;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
+  flex: 1;
+  border-right: solid 1px #272727;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .active-day {
+  background: #C33535;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px 10px 24px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table {
+  min-width: 100%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row {
+  border-radius: 8px;
+  background-color: #272727;
+  padding: 12px 20px;
+  display: flex;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td .sort-icon, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td .sort-icon {
+  margin-left: 10px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col {
+  width: 5%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col input[type=checkbox], .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col input[type=checkbox] {
+  margin-right: 10px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col {
+  width: 35%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .days-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .days-col {
+  width: 10%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .leave-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .leave-col {
+  width: 15%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col {
+  width: 35%;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component {
+  background: #1E1E1E;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px #272727;
+  padding: 16px 16px 10px 24px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .component-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select {
+  background-color: transparent;
+  border: none;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select:active {
+  outline: none;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component {
+  min-height: 298px;
+  padding: 10px 16px 10px 24px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list {
+  list-style: none;
+  padding: 0px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
+  margin: 0px;
+  overflow: hidden;
+  color: #898989;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
+.page-content .main-content .leave-requests-component .component-row .avatar-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page-content .main-content .leave-requests-component .component-row .avatar-component::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+  position: absolute;
+  top: 0px;
+  right: -20px;
+}
 .page-content .main-content .notifications-component {
   width: 464px;
   min-height: calc(100vh - 90px);
