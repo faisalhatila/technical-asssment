@@ -9,10 +9,15 @@ body {
 }
 
 .top-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: flex;
   color: #fff;
   padding: 0 40px;
   border-bottom: solid 2px #272727;
+  background-color: #151515;
+  z-index: 1;
 }
 .top-bar .logo-wrapper {
   padding: 20px 16px 20px 0;
@@ -207,6 +212,7 @@ body {
 }
 .page-content .main-content .dashboard-component .component-row {
   display: flex;
+  align-items: flex-start;
   gap: 18px;
 }
 .page-content .main-content .dashboard-component .component-row .heatmap-component {
@@ -220,7 +226,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: solid 2px #272727;
-  padding: 10px 16px 10px 24px;
+  padding: 16px 16px 10px 24px;
 }
 .page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .component-title {
   color: #FFF;
@@ -258,14 +264,14 @@ body {
 .page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list {
   display: flex;
   list-style: none;
-  border: solid 1px #ccc;
+  border: solid 1px #272727;
   border-radius: 8px;
   overflow: hidden;
   padding: 0px;
 }
 .page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
   flex: 1;
-  border-right: solid 1px #ccc;
+  border-right: solid 1px #272727;
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -277,22 +283,40 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px 16px 10px 24px;
+  min-height: 205px;
 }
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .circular-progress {
-  width: 190px;
-  height: 190px;
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .indicator-name {
+  margin: 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: capitalize;
+}
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .circular-progress .inner-circle {
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .inner-circle {
   position: absolute;
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .circular-progress .percentage {
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .percentage {
   position: relative;
   color: #FFF !important;
   text-align: center;
@@ -303,26 +327,142 @@ body {
   line-height: 100%; /* 30px */
   text-transform: capitalize;
 }
+.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
 .page-content .main-content .dashboard-component .component-row .most-day-away-component {
-  flex: 1;
   background: #1E1E1E;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row {
   background: transparent;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 2px #272727;
+  padding: 16px 16px 10px 24px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .component-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select {
+  background-color: transparent;
+  border: none;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: uppercase;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select:active {
+  outline: none;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component {
+  min-height: 298px;
+  padding: 10px 16px 10px 24px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list {
+  list-style: none;
+  padding: 0px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
+  margin: 0px;
+  overflow: hidden;
+  color: #898989;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
+.page-content .main-content .dashboard-component .component-row .avatar-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page-content .main-content .dashboard-component .component-row .avatar-component::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+  position: absolute;
+  top: 0px;
+  right: -20px;
 }
 .page-content .main-content .notifications-component {
   width: 464px;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 90px);
   padding: 0 24px 24px 24px;
   border-left: solid 2px #272727;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   background-color: #151515;
   right: 0px;
-  top: -10px;
+  top: 70px;
 }
 .page-content .main-content .notifications-component .notify-header {
   display: flex;
