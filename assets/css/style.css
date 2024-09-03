@@ -1,10 +1,10 @@
 * {
-  background-color: #1e1e1e;
+  background-color: #151515;
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
 }
 
-/*--------------------------------------------Navbar--------------------------------------------*/
+/*--------------------------------------------Topbar--------------------------------------------*/
 .top-bar {
   display: flex;
   color: #fff;
@@ -71,6 +71,7 @@
   margin: 0 16px;
 }
 .top-bar .top-bar-content .actions-component .notification-icon-component {
+  cursor: pointer;
   background: #6E56E0;
   width: 40px;
   height: 40px;
@@ -98,19 +99,198 @@
   margin: 0 0 0 16px;
 }
 
-.nav-bar {
+.page-content {
+  display: flex;
+  /*--------------------------------------------Navbar--------------------------------------------*/
+}
+.page-content .nav-bar {
   width: 240px;
   border-right: solid 2px #272727;
-  min-height: 100vh;
+  min-height: calc(100vh - 89.52px);
 }
-.nav-bar .nav-list {
+.page-content .nav-bar .nav-list {
   list-style: none;
   color: #fff;
   padding: 0;
+  margin-top: 0;
+  padding-right: 40px;
 }
-.nav-bar .nav-list .normal-list-item {
-  padding: 0 0 0 40px;
+.page-content .nav-bar .nav-list .normal-list-item {
+  padding: 12px 0 12px 40px;
+  display: flex;
+  align-items: center;
+  width: 180px;
+  margin-top: 8px;
 }
-.nav-bar .nav-list .leave-item {
+.page-content .nav-bar .nav-list .normal-list-item label {
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  margin-left: 15px;
+}
+.page-content .nav-bar .nav-list .normal-list-item .notify-value {
+  margin-left: 10px;
+  background: #FFD928;
+  color: #000000;
+  font-family: Urbanist;
+  font-size: 12.616px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  width: 28px;
+  height: 24px;
+  border-radius: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .nav-bar .nav-list .leave-item {
   background-color: #6E56E0 !important;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.page-content .nav-bar .nav-list .leave-item img, .page-content .nav-bar .nav-list .leave-item label {
+  background-color: #6E56E0 !important;
+}
+.page-content .main-content {
+  padding: 16px 40px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  /*--------------------------------------------Dashboard Component--------------------------------------------*/
+  /*--------------------------------------------Notifications Component--------------------------------------------*/
+}
+.page-content .main-content .tabs-row {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .tabs-row .tabs-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+.page-content .main-content .tabs-row .tabs-list .tabs-list-item {
+  margin-right: 12px;
+  padding: 8px 8px 18px 8px;
+  position: relative;
+}
+.page-content .main-content .tabs-row .tabs-list .unread::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #FFD928;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.page-content .main-content .tabs-row .tabs-list .active {
+  border-bottom: solid 2px #6E56E0 !important;
+}
+.page-content .main-content .dashboard-component {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .main-content .dashboard-component .component-title {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+.page-content .main-content .notifications-component {
+  width: 464px;
+  min-height: calc(100vh - 100px);
+  padding: 0 24px 24px 24px;
+  border-left: solid 2px #272727;
+  position: absolute;
+  right: 0px;
+  top: -10px;
+}
+.page-content .main-content .notifications-component .notify-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content .main-content .notifications-component .notify-header .mark-all-box {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .notifications-component .notify-header .mark-all-box label {
+  color: rgba(255, 255, 255, 0.65);
+  font-family: Inter !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-right: 4px;
+}
+.page-content .main-content .notifications-component .notifications-list {
+  list-style: none;
+  padding: 0px;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item {
+  background: #1E1E1E;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  padding: 16px;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notification-user-avatar {
+  min-width: 48px;
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notification-user-avatar img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: transparent;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .active::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 12px;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-message {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0px;
+  background: transparent;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-message .user-name {
+  font-weight: 700;
+  background: transparent;
+  margin-right: 8px;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-time {
+  color: #ccc;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  background: transparent;
 }/*# sourceMappingURL=style.css.map */

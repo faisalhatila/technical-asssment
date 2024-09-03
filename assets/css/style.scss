@@ -1,9 +1,10 @@
 * {
-    background-color: #1e1e1e;
+    // background-color: #1e1e1e;
+    background-color: #151515;
     font-family: 'Urbanist', sans-serif;
     font-optical-sizing: auto;
   }
-  /*--------------------------------------------Navbar--------------------------------------------*/
+  /*--------------------------------------------Topbar--------------------------------------------*/
   
 .top-bar {
     display: flex;
@@ -68,6 +69,7 @@
                 margin: 0 16px;
             }
             .notification-icon-component{
+                cursor: pointer;
                 background: #6E56E0;
                 width: 40px;
                 height: 40px;
@@ -99,19 +101,197 @@
     }
 
 }
-.nav-bar {
-    width: 240px;
-    border-right: solid 2px #272727;
-    min-height: 100vh;
-    .nav-list{
-        list-style: none;
-        color: #fff;
-        padding: 0;
-        .normal-list-item {
-            padding: 0 0 0 40px;
+.page-content{
+    display: flex;
+    /*--------------------------------------------Navbar--------------------------------------------*/
+    .nav-bar {
+        width: 240px;
+        // transform: translateY(-8px);
+        border-right: solid 2px #272727;
+        min-height: calc(100vh - 89.52px);
+        .nav-list{
+            list-style: none;
+            color: #fff;
+            padding: 0;
+            margin-top: 0;
+            padding-right: 40px;
+            .normal-list-item {
+                padding: 12px 0 12px 40px;
+                display: flex;
+                align-items: center;
+                width: 180px;
+                margin-top: 8px;
+                label {
+                    font-family: Urbanist;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%; /* 15px */
+                    margin-left: 15px;
+                }
+                .notify-value{
+                    margin-left: 10px;
+                    background: #FFD928;
+                    color: #000000;
+                    font-family: Urbanist;
+                    font-size: 12.616px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 100%;
+                    width: 28px;
+                    height: 24px;
+                    border-radius: 29px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .leave-item {
+                background-color: #6E56E0 !important;
+                border-top-right-radius: 40px;
+                border-bottom-right-radius: 40px;
+                img,label {background-color: #6E56E0 !important;}
+            }
         }
-        .leave-item {
-            background-color: #6E56E0 !important;
+    }
+    .main-content {
+        padding: 16px 40px;
+        color: #fff;
+        position: relative;
+        width: 100%;
+        .tabs-row{
+            display: flex;
+            align-items: center;
+            .tabs-list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                padding: 0px;
+                .tabs-list-item{
+                    margin-right: 12px;
+                    padding: 8px 8px 18px 8px;
+                    position: relative;
+                }
+                .unread::after{
+                        content:'';
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background-color: #FFD928;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                }
+                .active{
+                    border-bottom: solid 2px #6E56E0 !important;
+                }
+            }
+        }
+        /*--------------------------------------------Dashboard Component--------------------------------------------*/
+        .dashboard-component{
+            display: flex;
+            flex-direction: column;
+            .component-title{
+                color: #FFF;
+                font-family: Urbanist;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 125%;
+            }
+        }
+        /*--------------------------------------------Notifications Component--------------------------------------------*/
+        .notifications-component{
+            width: 464px;
+            min-height: calc(100vh - 100px);
+            padding: 0 24px 24px 24px;
+            border-left: solid 2px #272727;
+            position: absolute;
+            right: 0px;
+            top: -10px;
+            .notify-header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .mark-all-box{
+                    display: flex;
+                    align-items: center;
+                    label{
+                        color:rgba(255, 255, 255, 0.65);
+                        font-family: Inter !important;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin-right: 4px;
+                }
+                }
+            }
+            .notifications-list{
+                list-style: none;
+                padding: 0px;
+                .notifications-list-item{
+                    background: #1E1E1E;
+                    display: flex;
+                    gap: 16px;
+                    margin-bottom: 8px ;
+                    border-radius: 12px;
+                    padding: 16px;
+                    .notification-user-avatar{
+                        min-width: 48px;
+                        position: relative;
+                        background: transparent;
+                        display: flex;
+                        justify-content: flex-end;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            position: relative;
+                            background: transparent;
+                        }
+                    }
+                    .active::before{
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #FFD928;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                    }
+                    .notifications-content-component{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: transparent;
+                        gap: 12px;
+                        .notification-message{
+                            color: #FFF;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                            margin: 0px;
+                            background: transparent;
+                            .user-name{
+                                font-weight: 700;
+                                background: transparent;
+                                margin-right: 8px;
+                            }
+                        }
+                        .notification-time{
+                            color: #ccc;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 20px;
+                            background: transparent
+                        }
+                    }
+                }
+            }
         }
     }
 }

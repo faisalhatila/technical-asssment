@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -37,7 +41,7 @@
           <div class="filter-icon-component">
             <img src="/assets/img/FilterIcon.png" />
           </div>
-          <div class="notification-icon-component">
+          <div class="notification-icon-component" id="notificationButton">
             <span class="unread-notification-indication-light"></span>
             <img src="/assets/img/NotificationIcon.svg" />
           </div>
@@ -47,20 +51,176 @@
         </div>
       </div>
     </div>
-    <nav class="nav-bar">
-      <ul class="nav-list">
-        <li class="normal-list-item">Dashboard</li>
-        <li class="normal-list-item">Calendar</li>
-        <li class="normal-list-item">Recruitment</li>
-        <li class="normal-list-item">Employees</li>
-        <li class="normal-list-item leave-item">Leave</li>
-        <li class="normal-list-item">Organization</li>
-        <li class="normal-list-item">Billings</li>
-        <li class="normal-list-item">Engagement</li>
-        <li class="normal-list-item">Development</li>
-        <li class="normal-list-item">Performance</li>
-        <li class="normal-list-item">Reports</li>
-      </ul>
-    </nav>
+    <div class="page-content">
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/DashboardIcon-Active.svg" />
+            <label>Dashboard</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/CalendarIcon-Yellow.svg" />
+            <label>Calendar</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/RecruitmentIcon.svg" />
+            <label>Recruitment</label>
+            <span class="notify-value">10</span>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/EmployeesIcon.svg" />
+            <label>Employees</label>
+          </li>
+          <li class="normal-list-item leave-item">
+            <img src="/assets/img/nav-icons/LeaveIcon.svg" />
+            <label>Leave</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/OrganizationIcon.svg" />
+            <label>Organization</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/BillingsIcon.svg" />
+            <label>Billings</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/EngagementIcon.svg" />
+            <label>Engagement</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/DevelopmentIcon.svg" />
+            <label>Development</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/PerformanceIcon.svg" />
+            <label>Performance</label>
+          </li>
+          <li class="normal-list-item">
+            <img src="/assets/img/nav-icons/ReportsIcon.svg" />
+            <label>Reports</label>
+          </li>
+        </ul>
+      </nav>
+      <main class="main-content">
+        <div class="tabs-row">
+          <ul class="tabs-list">
+            <li class="tabs-list-item active unread">
+              <label> Leave Management</label>
+            </li>
+            <li class="tabs-list-item">
+              <label> Leave Requests</label>
+            </li>
+            <li class="tabs-list-item">
+              <label> Leave Types</label>
+            </li>
+            <li class="tabs-list-item unread">
+              <label> Leave Calendar</label>
+            </li>
+            <li class="tabs-list-item">
+              <label> Leave Report</label>
+            </li>
+            <li class="tabs-list-item">
+              <label> Leave Approver</label>
+            </li>
+            <li class="tabs-list-item">
+              <img src="/assets/img/FilterIcon.png" />
+            </li>
+          </ul>
+        </div>
+        <div class="dashboard-component">
+          <h1 class="component-title">Dashboard</h1>
+        </div>
+        <div id="notificationsComponent" class="notifications-component">
+          <div class="notify-header">
+            <h2>Notifications</h2>
+            <div class="mark-all-box">
+              <label>Mark all as read</label>
+              <img src="/assets/img/CheckMark.svg" />
+            </div>
+          </div>
+          <ul class="notifications-list">
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar active">
+                <img src="/assets/img/User2Avatar.png" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar active">
+                <img src="/assets/img/User3Avatar.png" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar active">
+                <img src="/assets/img/User1Avatar.svg" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar">
+                <img src="/assets/img/User2Avatar.png" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar">
+                <img src="/assets/img/User3Avatar.png" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+            <li class="notifications-list-item">
+              <div class="notification-user-avatar">
+                <img src="/assets/img/User1Avatar.svg" />
+              </div>
+              <div class="notifications-content-component">
+                <p class="notification-message">
+                  <strong class="user-name">Mark Jacobs</strong>has applied for
+                  leave and is currently awaiting approval.
+                </p>
+
+                <label class="notification-time">Today at 09:42 AM</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
   </body>
 </html>
