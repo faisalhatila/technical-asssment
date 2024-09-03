@@ -8,9 +8,10 @@
 .top-bar {
   display: flex;
   color: #fff;
+  padding: 0 40px;
 }
 .top-bar .logo-wrapper {
-  padding: 20px 16px 20px 40px;
+  padding: 20px 16px 20px 0;
   width: 240px;
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 .top-bar .top-bar-content .title-component {
   display: flex;
@@ -50,4 +52,47 @@
 .top-bar .top-bar-content .actions-component {
   display: flex;
   align-items: center;
+}
+.top-bar .top-bar-content .actions-component .search-bar-component {
+  display: flex;
+  align-items: center;
+  background: #272727;
+  border-radius: 28px;
+  padding: 8px 16px;
+  width: 280px;
+}
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=search] {
+  background: transparent;
+  border: none;
+  margin-left: 18px;
+}
+.top-bar .top-bar-content .actions-component .filter-icon-component {
+  margin: 0 16px;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component {
+  background: #6E56E0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component img {
+  width: 24px;
+  height: 24px;
+  background: #6E56E0;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component .unread-notification-indication-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFD928;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+.top-bar .top-bar-content .actions-component .account-action-component {
+  margin: 0 0 0 16px;
 }/*# sourceMappingURL=style.css.map */
