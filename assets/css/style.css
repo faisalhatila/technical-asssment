@@ -1,0 +1,53 @@
+* {
+  background-color: #1e1e1e;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/*--------------------------------------------Navbar--------------------------------------------*/
+.top-bar {
+  display: flex;
+  color: #fff;
+}
+.top-bar .logo-wrapper {
+  padding: 20px 16px 20px 40px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .logo-wrapper .logo-box {
+  display: flex;
+  align-items: center;
+}
+.top-bar .logo-wrapper .logo-box p {
+  font-size: 23px;
+  font-weight: 900;
+  margin-left: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.top-bar .top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar .top-bar-content .title-component {
+  display: flex;
+  align-items: center;
+}
+.top-bar .top-bar-content .title-component img {
+  margin-right: 18px;
+}
+.top-bar .top-bar-content .title-component p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.top-bar .top-bar-content .actions-component {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

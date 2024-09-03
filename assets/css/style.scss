@@ -1,0 +1,55 @@
+* {
+    background-color: #1e1e1e;
+    font-family: 'Urbanist', sans-serif;
+    font-optical-sizing: auto;
+  }
+  /*--------------------------------------------Navbar--------------------------------------------*/
+  
+  .top-bar {
+    display: flex;
+    color: #fff;
+    .logo-wrapper{
+        padding: 20px 16px 20px 40px;
+        width: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-box{
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 23px;
+                font-weight: 900;
+                margin-left: 8px;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
+    }
+    .top-bar-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title-component{
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 18px;
+            }
+            p{
+                color: #FFF;
+                font-family: Urbanist;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+            }
+        }
+        .actions-component{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+}
+  
