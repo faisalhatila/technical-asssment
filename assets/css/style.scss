@@ -5,12 +5,12 @@
   }
   /*--------------------------------------------Navbar--------------------------------------------*/
   
-  .top-bar {
+.top-bar {
     display: flex;
     color: #fff;
     padding: 0 40px;
+    border-bottom: solid 2px #272727;
     .logo-wrapper{
-        // padding: 20px 16px 20px 40px;
         padding: 20px 16px 20px 0;
         width: 240px;
         display: flex;
@@ -98,5 +98,21 @@
         }
     }
 
+}
+.nav-bar {
+    width: 240px;
+    border-right: solid 2px #272727;
+    min-height: 100vh;
+    .nav-list{
+        list-style: none;
+        color: #fff;
+        padding: 0;
+        .normal-list-item {
+            padding: 0 0 0 40px;
+        }
+        .leave-item {
+            background-color: #6E56E0 !important;
+        }
+    }
 }
   

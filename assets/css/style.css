@@ -9,6 +9,7 @@
   display: flex;
   color: #fff;
   padding: 0 40px;
+  border-bottom: solid 2px #272727;
 }
 .top-bar .logo-wrapper {
   padding: 20px 16px 20px 0;
@@ -95,4 +96,21 @@
 }
 .top-bar .top-bar-content .actions-component .account-action-component {
   margin: 0 0 0 16px;
+}
+
+.nav-bar {
+  width: 240px;
+  border-right: solid 2px #272727;
+  min-height: 100vh;
+}
+.nav-bar .nav-list {
+  list-style: none;
+  color: #fff;
+  padding: 0;
+}
+.nav-bar .nav-list .normal-list-item {
+  padding: 0 0 0 40px;
+}
+.nav-bar .nav-list .leave-item {
+  background-color: #6E56E0 !important;
 }/*# sourceMappingURL=style.css.map */
