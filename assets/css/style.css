@@ -117,6 +117,7 @@ body {
   border-right: solid 2px #272727;
   min-height: calc(100vh - 89.52px);
   position: fixed;
+  top: 72px;
 }
 .page-content .nav-bar .nav-list {
   list-style: none;
@@ -312,8 +313,8 @@ body {
   text-transform: capitalize;
 }
 .page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -669,6 +670,7 @@ body {
   align-items: center;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+  cursor: pointer;
   width: 98px;
   height: 40px;
   border-radius: 20px;

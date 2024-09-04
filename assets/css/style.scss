@@ -117,6 +117,7 @@ body{
         border-right: solid 2px #272727;
         min-height: calc(100vh - 89.52px);
         position: fixed;
+        top: 72px;
         .nav-list{
             list-style: none;
             color: #fff;
@@ -308,8 +309,8 @@ body{
                                 text-transform: capitalize;
                             }
                             .circular-progress {
-                                width: 150px;
-                                height: 150px;
+                                width: 140px;
+                                height: 140px;
                                 border-radius: 50%;
                                 display: flex;
                                 justify-content: center;
@@ -677,9 +678,10 @@ body{
                                             display: flex;
                                             align-items: center;
                                             .reject,.approve {
-                                            width: 98px;
-                                            height: 40px;
-                                            border-radius: 20px;
+                                                cursor: pointer;
+                                                width: 98px;
+                                                height: 40px;
+                                                border-radius: 20px;
                                             }
                                             .reject {
                                                 border: solid 2px #898989;

@@ -110,8 +110,12 @@ const leaveRequestData = [
     },
 ]
 
+
+
+// Get the table body element
 const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 
+// Loop through the data
 leaveRequestData.forEach((leave) => {
     // Create a new table row element
     const tr = document.createElement('tr');
@@ -119,6 +123,9 @@ leaveRequestData.forEach((leave) => {
 
     // Determine the row content based on the status
     if (leave.status === 'pending') {
+        // Assign a dynamic ID to the approve button using the leave request's ID
+        const approveButtonId = `approve-btn-${leave.id}`;
+
         tr.innerHTML = `
             <td class="table-col check-col pending-request">
                 <input type="checkbox" />
@@ -143,12 +150,41 @@ leaveRequestData.forEach((leave) => {
                 <span class="actions-col-span">
                     <span class="buttons-span">
                         <button class="reject">REJECT</button>
-                        <button class="approve">APPROVE</button>
+                        <button class="approve" id="${approveButtonId}">APPROVE</button>
                     </span>
                     <img src="/assets/img/RightIcon.svg" />
                 </span>
             </td>
         `;
+
+        // Append the row to the table body
+        leaveRequestTableBody.appendChild(tr);
+
+        // Add click event listener to the approve button
+        document.getElementById(approveButtonId).addEventListener('click', () => {
+            console.log('Row data:', leave);
+
+            // Change status to approved
+            leave.status = 'approved';
+
+            // Update the button text to APPROVED
+            const approveButton = document.getElementById(approveButtonId);
+            approveButton.textContent = 'APPROVED';
+
+            // Remove the reject button
+            const buttonsSpan = approveButton.closest('.buttons-span');
+            const rejectButton = buttonsSpan.querySelector('.reject');
+            rejectButton.remove();
+
+            // Change the class from buttons-span to approved-buttons-span
+            buttonsSpan.classList.remove('buttons-span');
+            buttonsSpan.classList.add('approved-buttons-span');
+
+            const checkColTd = tr.querySelector('.check-col');
+            checkColTd.classList.remove('pending-request');
+            checkColTd.classList.add('approved-request');
+
+        });
     } else {
         tr.innerHTML = `
             <td class="table-col check-col approved-request">
@@ -179,8 +215,8 @@ leaveRequestData.forEach((leave) => {
                 </span>
             </td>
         `;
-    }
 
-    // Append the row to the table body
-    leaveRequestTableBody.appendChild(tr);
+        // Append the row to the table body
+        leaveRequestTableBody.appendChild(tr);
+    }
 });
