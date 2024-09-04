@@ -115,6 +115,29 @@ const leaveRequestData = [
 // Get the table body element
 const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 
+const approveToastNotification = document.getElementById('approveToastNotification');
+const notificationMessage = document.getElementById('notificationMessage');
+const progressBar = document.querySelector('.progress-bar .progress');
+
+function showApproveToast(message) {
+    notificationMessage.textContent = message;
+    approveToastNotification.style.display = 'block';
+
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '100%';
+    progressBar.offsetHeight;
+
+    setTimeout(() => {
+        progressBar.style.transition = 'width 2s linear';
+        progressBar.style.width = '0%';
+    }, 10);
+
+    setTimeout(() => {
+        approveToastNotification.style.display = 'none';
+        progressBar.style.transition = 'none';
+    }, 2000);
+}
+
 // Loop through the data
 leaveRequestData.forEach((leave) => {
     // Create a new table row element
@@ -183,6 +206,8 @@ leaveRequestData.forEach((leave) => {
             const checkColTd = tr.querySelector('.check-col');
             checkColTd.classList.remove('pending-request');
             checkColTd.classList.add('approved-request');
+
+            showApproveToast(`${leave.name} ${leave.leave_type} Approved!.`);
 
         });
     } else {

@@ -413,13 +413,23 @@
     </div>
     <div
       id="approveToastNotification"
-      style=""
+      style="display: none"
       class="approve-toast-notification"
     >
       <div class="notification-header">
         <div class="progress-bar">
           <div class="progress"></div>
         </div>
+        <div class="toast-title">
+          <p>Notification</p>
+          <span id="closeNotification" class="close-notification-span">
+            <label>Just Now</label>
+            <img src="/assets/img/CloseIcon.png" />
+          </span>
+        </div>
+      </div>
+      <div class="notification-body">
+        <p class="notification-message" id="notificationMessage"></p>
       </div>
     </div>
     <script type="text/javascript" src="/assets/js/main.js"></script>
