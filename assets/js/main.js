@@ -1,6 +1,7 @@
 const notificationComponent = document.getElementById('notificationsComponent')
 const leaveDetailsComponent = document.getElementById('leaveDetailsComponent')
 const notificationIcon = document.getElementById('notificationButton')
+const leaveDetailCloseIcon = document.getElementById('leaveDetailCloseIcon')
 const toggleLeaveDetailsIcon = document.getElementById('toggleLeaveDetails')
 
 notificationIcon.addEventListener('click', () => {
@@ -11,6 +12,15 @@ notificationIcon.addEventListener('click', () => {
         notificationComponent.style.display = 'none'
     }
 
+})
+
+leaveDetailCloseIcon.addEventListener('click', () => {
+    if (leaveDetailsComponent.style.display === 'none') {
+        leaveDetailsComponent.style.display = 'block'
+    }
+    else {
+        leaveDetailsComponent.style.display = 'none'
+    }
 })
 const listItems = document.querySelectorAll('#daysList li');
 
