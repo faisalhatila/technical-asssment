@@ -1,4 +1,5 @@
-const notificationComponent = document.getElementById('notificationsComponent')
+// const notificationComponent = document.getElementById('notificationsComponent')
+const notificationComponent = document.getElementById('leaveDetailsComponent')
 const notificationIcon = document.getElementById('notificationButton')
 
 notificationIcon.addEventListener('click', () => {

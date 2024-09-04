@@ -943,6 +943,100 @@ body {
   line-height: 20px;
   background: transparent;
 }
+.page-content .main-content .leave-deatils-component {
+  width: 464px;
+  min-height: calc(100vh - 90px);
+  padding: 0 24px 24px 24px;
+  border-left: solid 2px #272727;
+  position: fixed;
+  z-index: 1;
+  background-color: #151515;
+  right: 0px;
+  top: 74px;
+}
+.page-content .main-content .leave-deatils-component .leave-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content .main-content .leave-deatils-component .user-details-card {
+  border: solid 2px #272727;
+  border-radius: 12px;
+  padding: 16px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component {
+  border-bottom: solid 2px #272727;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 15px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component {
+  margin-left: 16px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .info-key {
+  min-width: 95px;
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .info-value {
+  flex: 1;
+  color: #FFF;
+  /* Regular/Small */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 10px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .attachment-value {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .attachment-value img {
+  margin-right: 5px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component {
+  margin-top: 15px;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-start-end-date {
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .total-hours-text {
+  margin: 0px;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .table-visibility-controller {
+  display: flex;
+  align-items: center;
+}
 
 .approve-toast-notification {
   position: fixed;
