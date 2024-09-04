@@ -7,7 +7,7 @@ body{
     background-color: #151515;
 }  
 .top-bar {
-    position: sticky;
+    // position: sticky;
     top: 0;
     display: flex;
     color: #fff;
@@ -15,6 +15,9 @@ body{
     border-bottom: solid 2px #272727;
     background-color: #151515;
     z-index: 1;
+    position: fixed;
+    width: calc(100% - 80px);
+    top: 0;
     .logo-wrapper{
         padding: 20px 16px 20px 0;
         // width: 240px;
@@ -113,6 +116,7 @@ body{
         width: 240px;
         border-right: solid 2px #272727;
         min-height: calc(100vh - 89.52px);
+        position: fixed;
         .nav-list{
             list-style: none;
             color: #fff;
@@ -162,10 +166,19 @@ body{
         padding: 16px 40px;
         color: #fff;
         position: relative;
-        width: 100%;
+        // width: 100%;
+        // width: calc(100% - 272px);
+        width: calc(100vw - 272px);
+    margin-left: 272px;
         .tabs-row{
             display: flex;
             align-items: center;
+            top: 74px;
+            position: fixed;
+            background: #151515;
+            // background: #ccc;
+            width: calc(100% - 342px);
+            z-index: 1;
             .tabs-list {
                 display: flex;
                 align-items: center;
@@ -195,6 +208,7 @@ body{
         .dashboard-component{
             display: flex;
             flex-direction: column;
+            margin-top: 140px;
             .component-title{
                 color: #FFF;
                 font-family: Urbanist;
