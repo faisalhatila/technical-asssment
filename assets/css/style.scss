@@ -71,6 +71,10 @@ body{
                     background: transparent;
                     border: none;
                     margin-left: 18px;
+                    width: 100%;
+                }
+                input[type=search]:focus{
+                    outline: none;
                 }
             }
             .filter-icon-component{
@@ -1180,6 +1184,59 @@ body{
                         z-index: -1;
 
                     }
+                }
+            }
+            .comments-box-card{
+                border: solid 2px #272727;
+                border-radius: 12px;
+                padding: 16px;
+                // margin-bottom: 100px;
+                margin-bottom: 50px;
+                .comments-box{
+                    color: #fff;
+                    background-color: transparent;
+                    min-width: 100%;
+                    border: none;
+                }
+                
+                .comments-box:focus{
+                    outline: none;
+                }
+            }
+            .leave-request-actions-row{
+                display: flex;
+                justify-content: flex-end;
+                background-color: #272727;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+                // position: fixed;
+                // bottom: 0;
+                // width: 493px;
+                // right: 19px;
+                .action-button{
+                    border-radius: 20px;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .approve{
+                    border: solid 2px #6E56E0;
+                    background: #6E56E0;
+                    color: #fff;
+                    margin: 0 20px 0 15px;
+                    width: 130px;
+                    height: 40px;
+                    
+                }
+                .reject{
+                    border: solid 2px #151515;
+                    background:  #272727;
+                    color: #fff;
+                    width: 120px;
+                    height: 40px;
                 }
             }
         }
