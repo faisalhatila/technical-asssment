@@ -945,7 +945,8 @@ body {
 }
 .page-content .main-content .leave-deatils-component {
   width: 464px;
-  min-height: calc(100vh - 90px);
+  max-height: calc(100vh - 90px);
+  overflow: auto;
   padding: 0 24px 24px 24px;
   border-left: solid 2px #272727;
   position: fixed;

@@ -1,6 +1,7 @@
-// const notificationComponent = document.getElementById('notificationsComponent')
-const notificationComponent = document.getElementById('leaveDetailsComponent')
+const notificationComponent = document.getElementById('notificationsComponent')
+const leaveDetailsComponent = document.getElementById('leaveDetailsComponent')
 const notificationIcon = document.getElementById('notificationButton')
+const toggleLeaveDetailsIcon = document.getElementById('toggleLeaveDetails')
 
 notificationIcon.addEventListener('click', () => {
     if (notificationComponent.style.display === 'none') {
@@ -157,6 +158,7 @@ leaveRequestData.forEach((leave) => {
     if (leave.status === 'pending') {
         // Assign a dynamic ID to the approve button using the leave request's ID
         const approveButtonId = `approve-btn-${leave.id}`;
+        const toggleIconId = `toggleLeaveDetails-${leave.id}`; // Assign unique ID to the icon
 
         tr.innerHTML = `
             <td class="table-col check-col pending-request">
@@ -184,7 +186,7 @@ leaveRequestData.forEach((leave) => {
                         <button class="reject">REJECT</button>
                         <button class="approve" id="${approveButtonId}">APPROVE</button>
                     </span>
-                    <img src="/assets/img/RightIcon.svg" />
+                    <img src="/assets/img/RightIcon.svg" id="toggleLeaveDetails-${leave.id}" />
                 </span>
             </td>
         `;
@@ -218,6 +220,13 @@ leaveRequestData.forEach((leave) => {
 
             showApproveToast(`${leave.name} ${leave.leave_type} Approved!.`);
 
+        });
+        document.getElementById(toggleIconId).addEventListener('click', () => {
+            if (leaveDetailsComponent.style.display === 'none') {
+                leaveDetailsComponent.style.display = 'block';
+            } else {
+                leaveDetailsComponent.style.display = 'none';
+            }
         });
     } else {
         tr.innerHTML = `
