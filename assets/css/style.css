@@ -940,4 +940,34 @@ body {
   font-weight: 500;
   line-height: 20px;
   background: transparent;
+}
+
+.approve-toast-notification {
+  position: absolute;
+  z-index: 100;
+  top: 30px;
+  left: 20px;
+  background: #1E1E1E;
+  color: #fff;
+  min-width: 340px;
+  min-height: 122px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.approve-toast-notification .notification-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.approve-toast-notification .notification-header .progress-bar {
+  margin: 5px 10px;
+  height: 8px;
+  background-color: #888;
+  border-radius: 4px;
+}
+.approve-toast-notification .notification-header .progress-bar .progress {
+  width: 50%;
+  height: 100%;
+  background: #FFD928;
 }/*# sourceMappingURL=style.css.map */
