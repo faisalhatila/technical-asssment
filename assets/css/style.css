@@ -879,6 +879,8 @@ body {
 .page-content .main-content .notifications-component .notifications-list {
   list-style: none;
   padding: 0px;
+  overflow-y: auto;
+  max-height: 80vh;
 }
 .page-content .main-content .notifications-component .notifications-list .notifications-list-item {
   background: #1E1E1E;

@@ -896,6 +896,8 @@ body{
             .notifications-list{
                 list-style: none;
                 padding: 0px;
+                overflow-y: auto;
+                max-height: 80vh;
                 .notifications-list-item{
                     background: #1E1E1E;
                     display: flex;
