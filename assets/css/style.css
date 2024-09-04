@@ -945,7 +945,7 @@ body {
 }
 .page-content .main-content .leave-deatils-component {
   width: 464px;
-  max-height: calc(100vh - 90px);
+  height: calc(100vh - 90px);
   overflow: auto;
   padding: 0 24px 24px 24px;
   border-left: solid 2px #272727;
@@ -955,7 +955,7 @@ body {
   right: 0px;
   top: 74px;
 }
-.page-content .main-content .leave-deatils-component .leave-details-header {
+.page-content .main-content .leave-deatils-component .leave-details-header, .page-content .main-content .leave-deatils-component .approval-level-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1093,6 +1093,65 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.65px;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card {
+  border: solid 2px #272727;
+  border-radius: 12px;
+  padding: 16px;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 60px;
+  position: relative;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-avatar, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-avatar, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-avatar {
+  margin: 0 15px;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-indicator, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-indicator, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-indicator {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-pending {
+  background-color: #FFA424;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-row, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-row, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-row {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-key, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-key, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-key {
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  width: 120px;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-value, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-value, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-value {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .pending {
+  color: #898989 !important;
+}
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .timeline-connect-line, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .timeline-connect-line, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .timeline-connect-line {
+  height: 77px;
+  position: absolute;
+  left: 5.5px;
+  border-left: 1px #898989 dashed;
+  top: 36px;
+  z-index: -1;
 }
 
 .approve-toast-notification {

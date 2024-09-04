@@ -963,7 +963,8 @@ body{
         }
         .leave-deatils-component{
             width: 464px;
-            max-height: calc(100vh - 90px);
+            // max-height: calc(100vh - 90px);
+            height: calc(100vh - 90px);
             overflow: auto;
             padding: 0 24px 24px 24px;
             border-left: solid 2px #272727;
@@ -972,7 +973,7 @@ body{
             background-color: #151515;
             right: 0px;
             top: 74px;
-            .leave-details-header{
+            .leave-details-header,.approval-level-header{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -1117,6 +1118,203 @@ body{
                         }
                     }
                 }
+            }
+            .approval-level-card{
+                border: solid 2px #272727;
+                border-radius: 12px;
+                padding: 16px;
+                .approval-level-1-row,.approval-level-2-row,.approval-level-3-row{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    height: 60px;
+                    position: relative;
+                    .approver-avatar{
+                        margin: 0 15px;
+                    }
+                    .approval-indicator{
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 50%;
+                    }
+                    .approval-pending{
+                        background-color: #FFA424;
+                    }
+                    .approver-info-component{
+                        display: flex;
+                        flex-direction: column;
+                        .approver-info-row{
+                            display: flex;
+                            align-items: center;
+                        }
+                        .approver-info-key{
+                            color: #898989;
+                            font-family: Urbanist;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 20px; 
+                            width: 120px;
+                        }
+                        .approver-info-value{
+                            color: #FFF;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 20px;
+                        }
+                        .pending{
+                            color: #898989 !important;
+                        }
+                    }
+                    .timeline-connect-line{
+                        height: 77px;
+                        position: absolute;
+                        left: 5.5px;
+                        // width: 1px;
+                        // background-color: #ccc;
+                        border-left: 1px #898989 dashed;
+                        top: 36px;
+                        z-index: -1;
+
+                    }
+                }
+                // .user-details-component{
+                //     border-bottom: solid 2px #272727;
+                //     display: flex;
+                //     align-items: flex-start;
+                //     padding-bottom: 15px;
+                //     .user-info-component{
+                //     margin-left:16px;
+                //     .user-info-row{
+                //         display: flex;
+                //         align-items: center;
+                //         .info-key{
+                //             min-width: 95px;
+                //             color: #898989;
+                //             font-family: Urbanist;
+                //             font-size: 14px;
+                //             font-style: normal;
+                //             font-weight: 500;
+                //             line-height: 20px;
+                //         }
+                //         .info-value{
+                //             flex:1;
+                //             color: #FFF;
+                //             /* Regular/Small */
+                //             font-family: Inter;
+                //             font-size: 14px;
+                //             font-style: normal;
+                //             font-weight: 500;
+                //             line-height: 20px;
+                //             margin-left: 10px;
+                //         }
+                //         .attachment-value{
+                //             display: flex;
+                //             align-items: center;
+                //             img {
+                //                 margin-right : 5px
+                //             }
+                //         }
+                //     }
+                //     }
+                // }
+                // .leave-days-info-component{
+                //     margin-top: 15px;
+                //     .leave-start-end-date{
+                //         color: #898989;
+                //         font-family: Urbanist;
+                //         font-size: 12px;
+                //         font-style: normal;
+                //         font-weight: 700;
+                //         line-height: normal;
+                //         letter-spacing: 0.6px;
+                //         text-transform: uppercase;
+                //     }
+                //     .leave-hours-and-table-controller-row{
+                //         display: flex;
+                //         justify-content: space-between;
+                //         align-items: center;
+                //         .total-hours-text{
+                //             margin: 0px;
+                //             color: #FFF;
+                //             font-family: Urbanist;
+                //             font-size: 12px;
+                //             font-style: normal;
+                //             font-weight: 700;
+                //             line-height: normal;
+                //             letter-spacing: 0.6px;
+                //             text-transform: uppercase;
+                //         }
+                //         .table-visibility-controller{
+                //             display: flex;
+                //             align-items: center;
+                //             img {
+                //                 margin-left: 15px;
+                //             }
+                //         }
+                //     }
+                // }
+                // .leave-days-table-component{
+                //     .leave-days-table{
+                //         width: 100%;
+                //         margin-top: 15px;
+                //         .table-head{
+                //             background-color: #272727;
+                //             overflow: hidden;
+                //             .first-col{
+                //                 border-top-left-radius: 8px;
+                //                 border-bottom-left-radius: 8px;
+                //             }
+                //             .last-col{
+                //                 border-top-right-radius: 8px;
+                //                 border-bottom-right-radius: 8px;
+                //             }
+                //             td{
+                //                 padding: 10px;
+                //                 label {
+                //                     color: #898989;
+                //                     font-family: Urbanist;
+                //                     font-size: 13.587px;
+                //                     font-style: normal;
+                //                     font-weight: 500;
+                //                     line-height: normal;
+                //                     letter-spacing: 0.679px;
+                //                     text-transform: uppercase;
+                //                 }
+                //             }
+                //         }
+                //         .table-body-row{
+                //             td {
+                //                 padding: 8px 10px 2px 10px;
+                //                 label{
+                //                     color: #FFF;
+                //                     font-family: Urbanist;
+                //                     font-size: 13px;
+                //                     font-style: normal;
+                //                     font-weight: 700;
+                //                     line-height: normal;
+                //                     letter-spacing: 0.65px;
+                //                 }
+                //             }
+                //         }
+                //         .table-off-days-body-row{
+                //             td {
+                //                 padding: 8px 10px 5px;
+                //                 label{
+                //                     color: #898989;
+                //                     font-family: Urbanist;
+                //                     font-size: 13px;
+                //                     font-style: normal;
+                //                     font-weight: 400;
+                //                     line-height: normal;
+                //                     letter-spacing: 0.65px;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
             }
         }
     }
