@@ -584,28 +584,131 @@ body {
   border-radius: 8px;
   background-color: #272727;
   padding: 12px 20px;
-  display: flex;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td {
+  padding: 10px;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td .sort-icon, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td .sort-icon {
   margin-left: 10px;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col {
-  width: 5%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 10%;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col input[type=checkbox], .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col input[type=checkbox] {
   margin-right: 10px;
 }
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request {
+  position: relative;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: green;
+}
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col {
-  width: 35%;
+  display: flex;
+  align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .days-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .days-col {
-  width: 10%;
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col .user-name, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col .user-name {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 12px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .leave-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .leave-col {
-  width: 15%;
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span label, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span label {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15.528px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.776px;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col {
-  width: 35%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+  width: 98px;
+  height: 40px;
+  border-radius: 20px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject {
+  border: solid 2px #898989;
+  background-color: #1E1E1E;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 204px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer {
   padding: 16px 16px 16px 24px;
