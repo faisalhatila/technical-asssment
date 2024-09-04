@@ -990,6 +990,7 @@ body {
 .approve-toast-notification .notification-header .toast-title .close-notification-span img {
   max-width: 50%;
   margin-left: 10px;
+  cursor: pointer;
 }
 .approve-toast-notification .notification-body {
   padding: 10px;

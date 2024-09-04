@@ -51,6 +51,14 @@ Array.from(circularProgress).forEach((progressBar) => {
     }, speed);
 });
 
+const approveToastNotification = document.getElementById('approveToastNotification');
+
+const closeNotificationButton = document.getElementById("closeNotification");
+
+closeNotificationButton.addEventListener("click", () => {
+    approveToastNotification.style.display = "none";
+})
+
 
 const leaveRequestData = [
     {
@@ -115,7 +123,7 @@ const leaveRequestData = [
 // Get the table body element
 const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 
-const approveToastNotification = document.getElementById('approveToastNotification');
+// const approveToastNotification = document.getElementById('approveToastNotification');
 const notificationMessage = document.getElementById('notificationMessage');
 const progressBar = document.querySelector('.progress-bar .progress');
 
@@ -128,14 +136,14 @@ function showApproveToast(message) {
     progressBar.offsetHeight;
 
     setTimeout(() => {
-        progressBar.style.transition = 'width 2s linear';
+        progressBar.style.transition = 'width 5s linear';
         progressBar.style.width = '0%';
     }, 10);
 
     setTimeout(() => {
         approveToastNotification.style.display = 'none';
         progressBar.style.transition = 'none';
-    }, 2000);
+    }, 5000);
 }
 
 // Loop through the data
