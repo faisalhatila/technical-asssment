@@ -1117,6 +1117,9 @@ body {
 .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-pending, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-pending {
   background-color: #FFA424;
 }
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-approved, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-approved, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-approved {
+  background-color: green;
+}
 .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component, .page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component {
   display: flex;
   flex-direction: column;
